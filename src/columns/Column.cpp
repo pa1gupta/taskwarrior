@@ -44,6 +44,7 @@
 #include <ColRecur.h>
 #include <ColRType.h>
 #include <ColScheduled.h>
+#include <ColRemaining.h>
 #include <ColStart.h>
 #include <ColStatus.h>
 #include <ColTags.h>
@@ -94,6 +95,7 @@ Column* Column::factory (const std::string& name, const std::string& report)
   else if (column_name == "recur")       c = new ColumnRecur ();
   else if (column_name == "rtype")       c = new ColumnRType ();
   else if (column_name == "scheduled")   c = new ColumnScheduled ();
+  else if (column_name == "time")   c = new ColumnRemaining ();
   else if (column_name == "start")       c = new ColumnStart ();
   else if (column_name == "status")      c = new ColumnStatus ();
   else if (column_name == "tags")        c = new ColumnTags ();
@@ -136,6 +138,7 @@ void Column::factory (std::map <std::string, Column*>& all)
   c = new ColumnRecur ();          all[c->_name] = c;
   c = new ColumnRType ();          all[c->_name] = c;
   c = new ColumnScheduled ();      all[c->_name] = c;
+  c = new ColumnRemaining ();      all[c->_name] = c;
   c = new ColumnStart ();          all[c->_name] = c;
   c = new ColumnStatus ();         all[c->_name] = c;
   c = new ColumnTags ();           all[c->_name] = c;

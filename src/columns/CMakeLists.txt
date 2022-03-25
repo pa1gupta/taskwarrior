@@ -22,6 +22,7 @@ set (columns_SRCS Column.cpp Column.h
                   ColRecur.cpp ColRecur.h
                   ColRType.cpp ColRType.h
                   ColScheduled.cpp ColScheduled.h
+		  ColRemaining.cpp ColRemaining.h
                   ColStart.cpp ColStart.h
                   ColStatus.cpp ColStatus.h
                   ColTags.cpp ColTags.h

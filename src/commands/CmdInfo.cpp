@@ -266,6 +266,13 @@ int CmdInfo::execute (std::string& output)
       view.set (row, 1, Datetime (task.get_date ("scheduled")).toString (dateformat));
     }
 
+    // remaining
+    if (task.has ("time"))
+    {
+      row = view.addRow ();
+      view.set (row, 0, "Remaining");
+      view.set (row, 1, Datetime (task.get_date ("time")).toString (dateformat));
+    }
     // start
     if (task.has ("start"))
     {

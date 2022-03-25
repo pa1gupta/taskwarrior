@@ -31,6 +31,7 @@
 #include <Filter.h>
 #include <main.h>
 #include <format.h>
+#include <Duration.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 CmdStop::CmdStop ()
@@ -80,6 +81,12 @@ int CmdStop::execute (std::string&)
       std::string question = format ("Stop task {1} '{2}'?",
                                      task.identifier (true),
                                      task.get ("description"));
+
+      auto value = task.get ("time");
+      Duration dur(value);
+      Datetime started (task.get ("start"));
+      Duration remaining = dur.toTime_t() - Duration(Datetime() - started).toTime_t();
+      task.set("time", remaining.formatISO());
 
       task.modify (Task::modAnnotate);
       task.remove ("start");

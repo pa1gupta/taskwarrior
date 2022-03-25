@@ -246,6 +246,7 @@ std::string CmdEdit::formatTask (Task task, const std::string& dateformat)
          << "  Started:           " << formatDate (task, "start", dateformat)           << '\n'
          << "  Ended:             " << formatDate (task, "end", dateformat)             << '\n'
          << "  Scheduled:         " << formatDate (task, "scheduled", dateformat)       << '\n'
+         << "  Remaining:         " << formatDate (task, "time", dateformat)       << '\n'
          << "  Due:               " << formatDate (task, "due", dateformat)             << '\n'
          << "  Until:             " << formatDate (task, "until", dateformat)           << '\n'
          << "  Recur:             " << task.get ("recur")                               << '\n'

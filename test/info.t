@@ -73,6 +73,7 @@ class TestInfoCommand(TestCase):
         self.assertRegex(out, "Entered\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")
         self.assertRegex(out, "Waiting until\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")
         self.assertRegex(out, "Scheduled\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")
+        self.assertRegex(out, "Remaining\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")
         self.assertRegex(out, "Start\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")
         self.assertRegex(out, "Due\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")
         self.assertRegex(out, "Until\s+\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}")

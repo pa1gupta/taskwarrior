@@ -42,6 +42,7 @@ public:
   static std::string defaultProject;
   static std::string defaultDue;
   static std::string defaultScheduled;
+  static std::string defaultRemaining;
   static bool searchCaseSensitive;
   static bool regex;
   static std::map <std::string, std::string> attributes;  // name -> type

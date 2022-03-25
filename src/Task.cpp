@@ -66,6 +66,7 @@ static const float epsilon = 0.000001;
 std::string Task::defaultProject   = "";
 std::string Task::defaultDue       = "";
 std::string Task::defaultScheduled = "";
+std::string Task::defaultRemaining = "";
 bool Task::searchCaseSensitive     = true;
 bool Task::regex                   = false;
 std::map <std::string, std::string> Task::attributes;
